@@ -1,1 +1,7 @@
 <p>server component</p>
+<button class="btn btn-success" (click)="serverCreated = !serverCreated"> hide ! </button>
+<p *ngIf="serverCreated; else noServer">Server created</p>
+<ng-template #noServer>
+    <p>No server created</p>
+</ng-template>
+<hr>
